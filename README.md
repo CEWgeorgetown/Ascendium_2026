@@ -1,2 +1,2 @@
 # Ascendium_2026
-Interactive visualization for Ascendium blog post
+Interactive visualizations for the December 2026 Springboards to Opportunity-inspired blog post; contains an interactive Sankey chart and three interactive bubbleplots.
