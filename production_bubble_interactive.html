@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Production occupations</title>
+  <style>
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bubble-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+}
+
+.bubble-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 12px 0;
+}
+
+.bubble-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+  margin: 0 0 26px 0;
+  max-width: 1100px;
+}
+
+.bubble-y-label {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.bubble-chart {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.bubble-chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.metro-bubble {
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  outline: none;
+}
+
+.metro-bubble:focus-visible {
+  stroke: #0074CC;
+  stroke-width: 3;
+}
+
+.metro-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  fill: #222222;
+  pointer-events: none;
+}
+
+.axis-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  fill: #222222;
+}
+
+.axis-line {
+  stroke: #222222;
+  stroke-width: 2;
+}
+
+.bubble-x-label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.bubble-tooltip {
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  background: #ffffff;
+  color: #222222;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  padding: 12px 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 290px;
+  display: none;
+}
+
+.tooltip-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.tooltip-row {
+  margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+  .bubble-title {
+    font-size: 18px;
+  }
+
+  .bubble-subtitle {
+    font-size: 13px;
+  }
+
+  .bubble-y-label {
+    font-size: 13px;
+  }
+
+  .bubble-x-label {
+    font-size: 13px;
+  }
+}
+</style>
+</head>
+<html>
+  <body>
+    <div class="bubble-container">
+      <h1 class="bubble-title">Production occupations</h1>
+      <p class="bubble-subtitle">Circles represent major metro areas. Circle size represents the projected number of annual job openings in aligned middle-skills production occupations.</p>
+      <div class="bubble-y-label">Projected annual job openings per 1,000 workers ages 20–44</div>
+      <div class="bubble-chart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 640" preserveAspectRatio="xMinYMin meet" role="group" aria-label="Interactive bubble chart: Production occupations" style="display:block;width:100%;height:auto;"><line x1="95" y1="560" x2="1260" y2="560" class="axis-line"/><line x1="95" y1="55" x2="95" y2="560" class="axis-line"/><line x1="95.00" y1="560" x2="95.00" y2="568" class="axis-line"/><text x="95.00" y="595" text-anchor="middle" class="axis-text">0%</text>
+<line x1="386.25" y1="560" x2="386.25" y2="568" class="axis-line"/><text x="386.25" y="595" text-anchor="middle" class="axis-text">25%</text>
+<line x1="677.50" y1="560" x2="677.50" y2="568" class="axis-line"/><text x="677.50" y="595" text-anchor="middle" class="axis-text">50%</text>
+<line x1="968.75" y1="560" x2="968.75" y2="568" class="axis-line"/><text x="968.75" y="595" text-anchor="middle" class="axis-text">75%</text>
+<line x1="1260.00" y1="560" x2="1260.00" y2="568" class="axis-line"/><text x="1260.00" y="595" text-anchor="middle" class="axis-text">100%</text><line x1="87" y1="560.00" x2="95" y2="560.00" class="axis-line"/><text x="79" y="566.00" text-anchor="end" class="axis-text">0</text>
+<line x1="87" y1="307.50" x2="95" y2="307.50" class="axis-line"/><text x="79" y="313.50" text-anchor="end" class="axis-text">100</text>
+<line x1="87" y1="55.00" x2="95" y2="55.00" class="axis-line"/><text x="79" y="61.00" text-anchor="end" class="axis-text">200</text><circle class="metro-bubble" cx="95.00" cy="156.00" r="15.41" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Dallas, TX" data-openings="3,800" data-jobs="160" data-credential="0.0%" tabindex="0" role="graphics-symbol" aria-label="Dallas, TX, 3,800, annual openings, 160, openings per 1,000 workers, 0.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="561.00" cy="259.53" r="14.14" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Houston, TX" data-openings="3,200" data-jobs="119" data-credential="40.0%" tabindex="0" role="graphics-symbol" aria-label="Houston, TX, 3,200, annual openings, 119, openings per 1,000 workers, 40.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="106.65" cy="274.68" r="13.92" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Detroit, MI" data-openings="3,100" data-jobs="113" data-credential="1.0%" tabindex="0" role="graphics-symbol" aria-label="Detroit, MI, 3,100, annual openings, 113, openings per 1,000 workers, 1.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="118.30" cy="327.70" r="13.69" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Chicago, IL" data-openings="3,000" data-jobs="92" data-credential="2.0%" tabindex="0" role="graphics-symbol" aria-label="Chicago, IL, 3,000, annual openings, 92, openings per 1,000 workers, 2.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="106.65" cy="322.65" r="12.99" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="New York, NY" data-openings="2,700" data-jobs="94" data-credential="1.0%" tabindex="0" role="graphics-symbol" aria-label="New York, NY, 2,700, annual openings, 94, openings per 1,000 workers, 1.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="95.00" cy="102.97" r="10.61" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Boston, MA" data-openings="1,800" data-jobs="181" data-credential="0.0%" tabindex="0" role="graphics-symbol" aria-label="Boston, MA, 1,800, annual openings, 181, openings per 1,000 workers, 0.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="211.50" cy="272.15" r="10.31" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Philadelphia, PA" data-openings="1,700" data-jobs="114" data-credential="10.0%" tabindex="0" role="graphics-symbol" aria-label="Philadelphia, PA, 1,700, annual openings, 114, openings per 1,000 workers, 10.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="95.00" cy="317.60" r="10.00" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Atlanta, GA" data-openings="1,600" data-jobs="96" data-credential="0.0%" tabindex="0" role="graphics-symbol" aria-label="Atlanta, GA, 1,600, annual openings, 96, openings per 1,000 workers, 0.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="199.85" cy="282.25" r="9.68" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="St. Louis, MO" data-openings="1,500" data-jobs="110" data-credential="9.0%" tabindex="0" role="graphics-symbol" aria-label="St. Louis, MO, 1,500, annual openings, 110, openings per 1,000 workers, 9.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="933.80" cy="459.00" r="9.35" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Los Angeles, CA" data-openings="1,400" data-jobs="40" data-credential="72.0%" tabindex="0" role="graphics-symbol" aria-label="Los Angeles, CA, 1,400, annual openings, 40, openings per 1,000 workers, 72.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="118.30" cy="312.55" r="9.01" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Charlotte, NC" data-openings="1,300" data-jobs="98" data-credential="2.0%" tabindex="0" role="graphics-symbol" aria-label="Charlotte, NC, 1,300, annual openings, 98, openings per 1,000 workers, 2.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="164.90" cy="299.93" r="8.29" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Kansas City, MO" data-openings="1,100" data-jobs="103" data-credential="6.0%" tabindex="0" role="graphics-symbol" aria-label="Kansas City, MO, 1,100, annual openings, 103, openings per 1,000 workers, 6.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="223.15" cy="307.50" r="8.29" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Portland, OR" data-openings="1,100" data-jobs="100" data-credential="11.0%" tabindex="0" role="graphics-symbol" aria-label="Portland, OR, 1,100, annual openings, 100, openings per 1,000 workers, 11.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="164.90" cy="428.70" r="7.91" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Minneapolis, MN" data-openings="1,000" data-jobs="52" data-credential="6.0%" tabindex="0" role="graphics-symbol" aria-label="Minneapolis, MN, 1,000, annual openings, 52, openings per 1,000 workers, 6.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="630.90" cy="383.25" r="7.91" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Seattle, WA" data-openings="1,000" data-jobs="70" data-credential="46.0%" tabindex="0" role="graphics-symbol" aria-label="Seattle, WA, 1,000, annual openings, 70, openings per 1,000 workers, 46.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="176.55" cy="363.05" r="7.50" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Cincinnati, OH" data-openings="900" data-jobs="78" data-credential="7.0%" tabindex="0" role="graphics-symbol" aria-label="Cincinnati, OH, 900, annual openings, 78, openings per 1,000 workers, 7.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="129.95" cy="289.82" r="7.50" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Miami, FL" data-openings="900" data-jobs="107" data-credential="3.0%" tabindex="0" role="graphics-symbol" aria-label="Miami, FL, 900, annual openings, 107, openings per 1,000 workers, 3.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="374.60" cy="411.02" r="7.50" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Phoenix, AZ" data-openings="900" data-jobs="59" data-credential="24.0%" tabindex="0" role="graphics-symbol" aria-label="Phoenix, AZ, 900, annual openings, 59, openings per 1,000 workers, 24.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="129.95" cy="272.15" r="7.50" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Pittsburgh, PA" data-openings="900" data-jobs="114" data-credential="3.0%" tabindex="0" role="graphics-symbol" aria-label="Pittsburgh, PA, 900, annual openings, 114, openings per 1,000 workers, 3.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="95.00" cy="231.75" r="7.50" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Washington, DC" data-openings="900" data-jobs="130" data-credential="0.0%" tabindex="0" role="graphics-symbol" aria-label="Washington, DC, 900, annual openings, 130, openings per 1,000 workers, 0.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="164.90" cy="292.35" r="7.07" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="San Antonio, TX" data-openings="800" data-jobs="106" data-credential="6.0%" tabindex="0" role="graphics-symbol" aria-label="San Antonio, TX, 800, annual openings, 106, openings per 1,000 workers, 6.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="141.60" cy="209.03" r="7.07" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Tampa, FL" data-openings="800" data-jobs="139" data-credential="4.0%" tabindex="0" role="graphics-symbol" aria-label="Tampa, FL, 800, annual openings, 139, openings per 1,000 workers, 4.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="95.00" cy="279.72" r="6.61" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Austin, TX" data-openings="700" data-jobs="111" data-credential="0.0%" tabindex="0" role="graphics-symbol" aria-label="Austin, TX, 700, annual openings, 111, openings per 1,000 workers, 0.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="129.95" cy="320.12" r="6.61" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Grand Rapids, MI" data-openings="700" data-jobs="95" data-credential="3.0%" tabindex="0" role="graphics-symbol" aria-label="Grand Rapids, MI, 700, annual openings, 95, openings per 1,000 workers, 3.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="223.15" cy="441.32" r="6.61" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Riverside, CA" data-openings="700" data-jobs="47" data-credential="11.0%" tabindex="0" role="graphics-symbol" aria-label="Riverside, CA, 700, annual openings, 47, openings per 1,000 workers, 11.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="164.90" cy="259.53" r="6.61" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Salt Lake City, UT" data-openings="700" data-jobs="119" data-credential="6.0%" tabindex="0" role="graphics-symbol" aria-label="Salt Lake City, UT, 700, annual openings, 119, openings per 1,000 workers, 6.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="304.70" cy="390.82" r="6.61" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="San Diego, CA" data-openings="700" data-jobs="67" data-credential="18.0%" tabindex="0" role="graphics-symbol" aria-label="San Diego, CA, 700, annual openings, 67, openings per 1,000 workers, 18.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="95.00" cy="345.38" r="6.12" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Birmingham, AL" data-openings="600" data-jobs="85" data-credential="0.0%" tabindex="0" role="graphics-symbol" aria-label="Birmingham, AL, 600, annual openings, 85, openings per 1,000 workers, 0.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="141.60" cy="398.40" r="6.12" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Cleveland, OH" data-openings="600" data-jobs="64" data-credential="4.0%" tabindex="0" role="graphics-symbol" aria-label="Cleveland, OH, 600, annual openings, 64, openings per 1,000 workers, 4.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="642.55" cy="226.70" r="6.12" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Hartford, CT" data-openings="600" data-jobs="132" data-credential="47.0%" tabindex="0" role="graphics-symbol" aria-label="Hartford, CT, 600, annual openings, 132, openings per 1,000 workers, 47.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="491.10" cy="416.08" r="6.12" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Indianapolis, IN" data-openings="600" data-jobs="57" data-credential="34.0%" tabindex="0" role="graphics-symbol" aria-label="Indianapolis, IN, 600, annual openings, 57, openings per 1,000 workers, 34.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="129.95" cy="277.20" r="6.12" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Las Vegas, NV" data-openings="600" data-jobs="112" data-credential="3.0%" tabindex="0" role="graphics-symbol" aria-label="Las Vegas, NV, 600, annual openings, 112, openings per 1,000 workers, 3.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="176.55" cy="380.73" r="6.12" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Louisville, KY" data-openings="600" data-jobs="71" data-credential="7.0%" tabindex="0" role="graphics-symbol" aria-label="Louisville, KY, 600, annual openings, 71, openings per 1,000 workers, 7.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="211.50" cy="421.12" r="6.12" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Milwaukee, WI" data-openings="600" data-jobs="55" data-credential="10.0%" tabindex="0" role="graphics-symbol" aria-label="Milwaukee, WI, 600, annual openings, 55, openings per 1,000 workers, 10.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="95.00" cy="416.08" r="6.12" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Nashville, TN" data-openings="600" data-jobs="57" data-credential="0.0%" tabindex="0" role="graphics-symbol" aria-label="Nashville, TN, 600, annual openings, 57, openings per 1,000 workers, 0.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="665.85" cy="340.32" r="6.12" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Virginia Beach, VA" data-openings="600" data-jobs="87" data-credential="49.0%" tabindex="0" role="graphics-symbol" aria-label="Virginia Beach, VA, 600, annual openings, 87, openings per 1,000 workers, 49.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="328.00" cy="289.82" r="5.59" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Baltimore, MD" data-openings="500" data-jobs="107" data-credential="20.0%" tabindex="0" role="graphics-symbol" aria-label="Baltimore, MD, 500, annual openings, 107, openings per 1,000 workers, 20.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="421.20" cy="267.10" r="5.59" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Jacksonville, FL" data-openings="500" data-jobs="116" data-credential="28.0%" tabindex="0" role="graphics-symbol" aria-label="Jacksonville, FL, 500, annual openings, 116, openings per 1,000 workers, 28.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="118.30" cy="340.32" r="5.59" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Providence, RI" data-openings="500" data-jobs="87" data-credential="2.0%" tabindex="0" role="graphics-symbol" aria-label="Providence, RI, 500, annual openings, 87, openings per 1,000 workers, 2.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="95.00" cy="421.12" r="5.00" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Columbus, OH" data-openings="400" data-jobs="55" data-credential="0.0%" tabindex="0" role="graphics-symbol" aria-label="Columbus, OH, 400, annual openings, 55, openings per 1,000 workers, 0.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="351.30" cy="398.40" r="5.00" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Memphis, TN" data-openings="400" data-jobs="64" data-credential="22.0%" tabindex="0" role="graphics-symbol" aria-label="Memphis, TN, 400, annual openings, 64, openings per 1,000 workers, 22.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="176.55" cy="277.20" r="5.00" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="New Orleans, LA" data-openings="400" data-jobs="112" data-credential="7.0%" tabindex="0" role="graphics-symbol" aria-label="New Orleans, LA, 400, annual openings, 112, openings per 1,000 workers, 7.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="316.35" cy="405.98" r="5.00" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Sacramento, CA" data-openings="400" data-jobs="61" data-credential="19.0%" tabindex="0" role="graphics-symbol" aria-label="Sacramento, CA, 400, annual openings, 61, openings per 1,000 workers, 19.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="386.25" cy="183.77" r="5.00" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Tulsa, OK" data-openings="400" data-jobs="149" data-credential="25.0%" tabindex="0" role="graphics-symbol" aria-label="Tulsa, OK, 400, annual openings, 149, openings per 1,000 workers, 25.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="164.90" cy="426.17" r="4.33" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Buffalo, NY" data-openings="300" data-jobs="53" data-credential="6.0%" tabindex="0" role="graphics-symbol" aria-label="Buffalo, NY, 300, annual openings, 53, openings per 1,000 workers, 6.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="234.80" cy="383.25" r="4.33" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Oklahoma City, OK" data-openings="300" data-jobs="70" data-credential="12.0%" tabindex="0" role="graphics-symbol" aria-label="Oklahoma City, OK, 300, annual openings, 70, openings per 1,000 workers, 12.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="176.55" cy="436.27" r="3.54" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Fresno, CA" data-openings="200" data-jobs="49" data-credential="7.0%" tabindex="0" role="graphics-symbol" aria-label="Fresno, CA, 200, annual openings, 49, openings per 1,000 workers, 7.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="95.00" cy="443.85" r="3.54" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Raleigh, NC" data-openings="200" data-jobs="46" data-credential="0.0%" tabindex="0" role="graphics-symbol" aria-label="Raleigh, NC, 200, annual openings, 46, openings per 1,000 workers, 0.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="95.00" cy="405.98" r="3.54" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Richmond, VA" data-openings="200" data-jobs="61" data-credential="0.0%" tabindex="0" role="graphics-symbol" aria-label="Richmond, VA, 200, annual openings, 61, openings per 1,000 workers, 0.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="95.00" cy="456.48" r="3.54" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Rochester, NY" data-openings="200" data-jobs="41" data-credential="0.0%" tabindex="0" role="graphics-symbol" aria-label="Rochester, NY, 200, annual openings, 41, openings per 1,000 workers, 0.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="223.15" cy="491.82" r="3.54" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="San Francisco, CA" data-openings="200" data-jobs="27" data-credential="11.0%" tabindex="0" role="graphics-symbol" aria-label="San Francisco, CA, 200, annual openings, 27, openings per 1,000 workers, 11.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="561.00" cy="428.70" r="3.54" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="San Jose, CA" data-openings="200" data-jobs="52" data-credential="40.0%" tabindex="0" role="graphics-symbol" aria-label="San Jose, CA, 200, annual openings, 52, openings per 1,000 workers, 40.0%, credentials as a percentage of openings" />
+<circle class="metro-bubble" cx="188.20" cy="337.80" r="3.54" fill="#144175" fill-opacity="0.8" stroke="white" stroke-width="1" data-metro="Tucson, AZ" data-openings="200" data-jobs="88" data-credential="8.0%" tabindex="0" role="graphics-symbol" aria-label="Tucson, AZ, 200, annual openings, 88, openings per 1,000 workers, 8.0%, credentials as a percentage of openings" /><text class="metro-label" x="122.41" y="161.00" text-anchor="start">Dallas, TX</text>
+<text class="metro-label" x="587.14" y="264.53" text-anchor="start">Houston, TX</text>
+<text class="metro-label" x="132.57" y="279.68" text-anchor="start">Detroit, MI</text></svg></div>
+      <div class="bubble-x-label">Credentials produced as a percentage of annual job openings</div>
+      <div class="bubble-tooltip" role="status" aria-live="polite"></div>
+    </div>
+    <script>
+(function() {
+
+  const container = document.querySelector(".bubble-container");
+  const bubbles = Array.from(
+    document.querySelectorAll(".metro-bubble")
+  );
+  const tooltip = document.querySelector(".bubble-tooltip");
+
+  function moveTooltip(event) {
+
+    const rect = container.getBoundingClientRect();
+
+    let x = event.clientX - rect.left + 16;
+    let y = event.clientY - rect.top + 12;
+
+    const w = tooltip.offsetWidth;
+    const h = tooltip.offsetHeight;
+
+    if (x + w > rect.width) {
+      x = event.clientX - rect.left - w - 16;
+    }
+
+    if (y + h > rect.height) {
+      y = event.clientY - rect.top - h - 12;
+    }
+
+    tooltip.style.left = Math.max(0, x) + "px";
+    tooltip.style.top = Math.max(0, y) + "px";
+  }
+
+  function showTooltip(bubble, event) {
+
+    bubbles.forEach(function(b) {
+      b.style.opacity = (b === bubble) ? "1" : "0.18";
+    });
+
+    tooltip.replaceChildren();
+
+    const title = document.createElement("div");
+    title.className = "tooltip-title";
+    title.textContent = bubble.dataset.metro;
+
+    tooltip.appendChild(title);
+
+    const rows = [
+      ["Annual job openings", bubble.dataset.openings],
+      ["Openings per 1,000 workers", bubble.dataset.jobs],
+      ["Credentials as % of openings", bubble.dataset.credential]
+    ];
+
+    rows.forEach(function(item) {
+
+      const row = document.createElement("div");
+      row.className = "tooltip-row";
+
+      const label = document.createElement("strong");
+      label.textContent = item[0] + ": ";
+
+      row.appendChild(label);
+      row.appendChild(document.createTextNode(item[1]));
+
+      tooltip.appendChild(row);
+    });
+
+    tooltip.style.display = "block";
+
+    if (event && event.clientX !== undefined) {
+      moveTooltip(event);
+    } else {
+      const r = bubble.getBoundingClientRect();
+
+      moveTooltip({
+        clientX: r.left + r.width / 2,
+        clientY: r.top + r.height / 2
+      });
+    }
+  }
+
+  function resetBubbles() {
+
+    bubbles.forEach(function(b) {
+      b.style.opacity = "0.8";
+    });
+
+    tooltip.style.display = "none";
+  }
+
+  bubbles.forEach(function(bubble) {
+
+    bubble.addEventListener("mouseenter", function(e) {
+      showTooltip(bubble, e);
+    });
+
+    bubble.addEventListener("mousemove", moveTooltip);
+
+    bubble.addEventListener("mouseleave", resetBubbles);
+
+    bubble.addEventListener("focus", function() {
+      showTooltip(bubble, null);
+    });
+
+    bubble.addEventListener("blur", resetBubbles);
+
+    bubble.addEventListener("click", function(e) {
+      e.stopPropagation();
+      showTooltip(bubble, e);
+    });
+  });
+
+  container.addEventListener("click", function(e) {
+    if (!e.target.classList.contains("metro-bubble")) {
+      resetBubbles();
+    }
+  });
+
+})();
+</script>
+  </body>
+</html>
+</html>
